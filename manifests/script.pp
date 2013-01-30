@@ -11,7 +11,7 @@ define profile_d::script($ensure = 'present', $content = '', $content_file = '',
   }
 
   if ($content != '') {
-    $content_value = inline_template("<%= scope.function_template('profile_d/header.erb') -%>
+    $content_value = inline_template("<%= scope.function_template(['profile_d/header.erb']) -%>
 $content")
   } elsif ($content_file != '') {
     $content_value = template($content_file)
