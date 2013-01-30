@@ -29,7 +29,7 @@ $content")
     ensure  => $ensure,
     owner   => root,
     group   => root,
-    mode    => '0755',
+    mode    => '0644',
     content => $content_value,
     source  => $source_value,
     require => File['/etc/profile.d'],
